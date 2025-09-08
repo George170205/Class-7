@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #0774f1;
+}
+
+.container {
+    display: flex;
+    width: 98%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    flex-wrap: wrap; /* Para que los elementos puedan bajar si no caben */
+}
+
+
+.container img {
+    border-radius: 20px;
+    width: 98%;
+    height: auto;
+    transition: 0.5s;
+}
+.container img:hover{
+    box-shadow: 0 0 15px #034eda;
+    transform: scale(1.05);
+}
+header p{
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+/* ===== Media Queries ===== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 992px) {
+    .container {
+        justify-content: center; /* Centra los elementos */
+        gap: 20px; /* Espacio entre bloques */
+    }
+    .container div {
+        flex: 1 1 45%; /* Cada bloque ocupa casi la mitad del ancho */
+        text-align: center;
+    }
+}
+
+/* Celulares (pantallas pequeñas) */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Apila los elementos en columna */
+        align-items: center;
+    }
+    .container div {
+        width: 90%; /* Que no ocupe todo el ancho */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .container img {
+        width: 100px; /* Imagen más pequeña en móviles */
+    }
+}
